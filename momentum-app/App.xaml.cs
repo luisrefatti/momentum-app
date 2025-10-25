@@ -1,4 +1,6 @@
-﻿namespace momentum_app
+﻿using momentum_app.Pages;
+
+namespace  momentum_app
 {
     public partial class App : Application
     {
@@ -25,7 +27,7 @@
 
         protected override Window CreateWindow(IActivationState? activationState)
         {
-            return new Window(new AppShell());
+            return new Window(new HomePage());
         }
     }
 }
