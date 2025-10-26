@@ -4,9 +4,17 @@
              x:Class="momentum_app.Pages.HomePage"
              Title="HomePage">
 
-    <ScrollView>
-        <VerticalStackLayout>
-            <Label Text="hello world!"/>
+    <ScrollView Background="#0e0017">
+        <VerticalStackLayout HorizontalOptions="Center" VerticalOptions="Center">
+            <Label Text="Momentum" FontFamily="Montserrat" FontAttributes="Bold" TextColor="#6d4b96" FontSize="20" HorizontalTextAlignment="Center"/>
+            <Label x:Name="lbFrase" Text="Foco total!" TextColor="#f2f2f2" FontFamily="Montserrat" HorizontalOptions="Center" Margin="0,10,0,0"/>
+            <Label x:Name="lbTempo" FontSize="42" TextColor="White" FontFamily="Space Mono" Text="25:00" HorizontalOptions="Center" Margin="0,50,0,0" FontAttributes="Bold"/>
+
+            <Grid HorizontalOptions="Center">
+                <Button x:Name ="btInicia" Text="INICIAR" FontAttributes="Bold" FontSize="12" WidthRequest="75" HeightRequest="75" Margin="0,50,0,0" CornerRadius="50" BackgroundColor="#6d4b96" TextColor="White" HorizontalOptions="Center" VerticalOptions="Center" FontFamily="Montserrat"/>
+                <Button x:Name ="btReinicia" Text="R" FontAttributes="Bold" FontSize="12" WidthRequest="50" HeightRequest="50" Margin="150,50,0,0" CornerRadius="50" BackgroundColor="#3a2c4d" TextColor="White" HorizontalOptions="Center" VerticalOptions="Center" FontFamily="Montserrat"/>
+                <Button x:Name ="btProx" Text="P" FontAttributes="Bold" FontSize="12" WidthRequest="50" HeightRequest="50" Margin="-150,50,0,0" CornerRadius="50" BackgroundColor="#3a2c4d" TextColor="White" HorizontalOptions="Center" VerticalOptions="Center" FontFamily="Montserrat"/>
+            </Grid>
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>
