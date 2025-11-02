@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="momentum_app.Pages.HomePage"
-             Title="HomePage"
+             Title="Pomodoro"
              BackgroundColor="#0e0017">
     <Grid>
 
@@ -10,7 +10,7 @@
             HorizontalOptions="Center" 
             VerticalOptions="Center">
 
-            <Label Text="Momentum" FontFamily="Montserrat-Bold" TextColor="#6d4b96" FontSize="20" HorizontalTextAlignment="Center"/>
+            <Label Text="Momentum" FontFamily="MontserratBold" TextColor="#6d4b96" FontSize="20" HorizontalTextAlignment="Center"/>
             <Label x:Name="lbFrase" Text="Foco total!" TextColor="#f2f2f2" FontFamily="Montserrat" HorizontalOptions="Center" Margin="0,10,0,0"/>
             <Label x:Name="lbTempo" FontSize="42" TextColor="White" FontFamily="SpaceMono" Text="25:00" HorizontalOptions="Center" Margin="0,50,0,0" FontAttributes="Bold"/>
 

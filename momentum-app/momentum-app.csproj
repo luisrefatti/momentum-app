@@ -71,6 +71,9 @@
 	  <MauiXaml Update="Pages\HomePage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Pages\TabNav.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Pages\TaskPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

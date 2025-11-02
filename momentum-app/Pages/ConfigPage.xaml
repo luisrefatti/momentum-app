@@ -5,7 +5,7 @@
              Title="ConfigPage">
     <VerticalStackLayout>
         <Label 
-            Text="Welcome to .NET MAUI!"
+            Text="Welcome to CONFIG PAGE"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
     </VerticalStackLayout>

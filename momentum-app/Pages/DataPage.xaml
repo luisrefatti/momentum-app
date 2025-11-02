@@ -5,7 +5,7 @@
              Title="DataPage">
     <VerticalStackLayout>
         <Label 
-            Text="Welcome to .NET MAUI!"
+            Text="Welcome to DATA PAGE"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
     </VerticalStackLayout>
