@@ -8,26 +8,26 @@ public partial class TabNav : TabbedPage
 
 		var paginaPomodoro = new HomePage()
 		{
-			Title = "Timer",
-			IconImageSource = ""
+			Title = "TIMER",
+			IconImageSource = "timericon.svg"
 		};
 
         var paginaTarefas = new TaskPage()
         {
-            Title = "Task",
-            IconImageSource = ""
+            Title = "TASK",
+            IconImageSource = "taskicon.svg"
         };
 
         var paginaDados = new DataPage()
         {
-            Title = "Data",
-            IconImageSource = ""
+            Title = "DATA",
+            IconImageSource = "dataicon.svg"
         };
 
         var paginaConfig = new ConfigPage()
         {
-            Title = "Config",
-            IconImageSource = ""
+            Title = "CONFIG",
+            IconImageSource = "configicon.svg"
         };
 
         this.Children.Add(paginaPomodoro);

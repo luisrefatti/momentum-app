@@ -2,9 +2,9 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="momentum_app.Pages.HomePage"
-             Title="Pomodoro"
+             Title="Timer"
              BackgroundColor="#0e0017">
-    <Grid>
+<Grid>
 
         <VerticalStackLayout 
             HorizontalOptions="Center" 
