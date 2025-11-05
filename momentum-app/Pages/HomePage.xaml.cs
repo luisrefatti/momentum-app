@@ -6,4 +6,19 @@ public partial class HomePage : ContentPage
 	{
 		InitializeComponent();
 	}
+
+    private void btProx_Clicked(object sender, EventArgs e)
+    {
+
+    }
+
+    private void btReinicia_Clicked(object sender, EventArgs e)
+    {
+
+    }
+
+    private void btInicia_Clicked(object sender, EventArgs e)
+    {
+
+    }
 }

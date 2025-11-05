@@ -2,11 +2,32 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="momentum_app.Pages.TaskPage"
-             Title="TaskPage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to TASK PAGE"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+             Title="TaskPage"
+             BackgroundColor="#0e0017">
+
+    <VerticalStackLayout HorizontalOptions="Center" >
+
+        <HorizontalStackLayout HorizontalOptions="Center" Spacing="10" Margin="0,20,0,0">
+
+            <Label Text="My tasks"
+                   VerticalOptions="Center"
+                   FontFamily="MontserratBold"
+                   FontSize="20"
+                   Margin="0,0,70,0"
+                   TextColor="#6d4b96"/>
+
+            <Button Text="+" 
+                    x:Name="btAddTask" 
+                    Clicked="btAddTask_Clicked" 
+                    CornerRadius="30" 
+                    WidthRequest="30" 
+                    HeightRequest="30"
+                    FontSize="25"
+                    TextColor="White"
+                    FontFamily="MontserratBold"
+                    Padding="0"/>
+        </HorizontalStackLayout>
+        <Label x:Name="lbStatusTask" Text="Não existem tarefas lançadas." FontFamily="Montserrat" FontSize="10" HorizontalOptions="Center" Margin="0,50,0,0"/>
+        
     </VerticalStackLayout>
 </ContentPage>

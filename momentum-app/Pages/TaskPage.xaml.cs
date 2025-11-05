@@ -6,4 +6,9 @@ public partial class TaskPage : ContentPage
 	{
 		InitializeComponent();
 	}
+
+    private void btAddTask_Clicked(object sender, EventArgs e)
+    {
+
+    }
 }
