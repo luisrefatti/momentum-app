@@ -21,13 +21,81 @@
                FontFamily="MontserratBold"
                VerticalOptions="Center"
                HorizontalOptions="Center"
-               Margin="0,30,0,0"
+               Margin="0,30,0,10"
                />
+        
         <HorizontalStackLayout>
-            <Grid BackgroundColor="#6d4b96">
-                
+            <Grid>
+                <BoxView
+                    BackgroundColor="#6d4b96"
+                    WidthRequest="150"
+                    HeightRequest="75"
+                    VerticalOptions="Center"
+                    CornerRadius="10"
+                    Margin="0,0,-175,0"/>
+
+                <BoxView
+                    BackgroundColor="#6d4b96"
+                    WidthRequest="150"
+                    HeightRequest="75"
+                    VerticalOptions="Center"
+                    CornerRadius="10"
+                    Margin="0,0,175,0"/>
             </Grid>
-            
         </HorizontalStackLayout>
+        <VerticalStackLayout>
+            <Label Text="Focus last 7 days"
+               FontFamily="MontserratBold"
+               VerticalOptions="Center"
+               HorizontalOptions="Center"
+               Margin="0,30,0,10"
+               />
+            <Grid>
+                <BoxView
+                    BackgroundColor="#6d4b96"
+                    WidthRequest="327"
+                    HeightRequest="100"
+                    VerticalOptions="Center"
+                    CornerRadius="10"
+                    Margin="0,0,0,0"/>
+            </Grid>
+        </VerticalStackLayout>
+
+        <VerticalStackLayout>
+            <Label Text="Tasks by weight"
+               FontFamily="MontserratBold"
+               VerticalOptions="Center"
+               HorizontalOptions="Center"
+               Margin="0,30,0,10"
+               />
+            <Grid>
+                <BoxView
+                    BackgroundColor="#6d4b96"
+                    WidthRequest="327"
+                    HeightRequest="100"
+                    VerticalOptions="Center"
+                    CornerRadius="10"
+                    Margin="0,0,0,0"/>
+            </Grid>
+        </VerticalStackLayout>
+
+        <VerticalStackLayout>
+            <Label Text="Focus record this week"
+       FontFamily="MontserratBold"
+       VerticalOptions="Center"
+       HorizontalOptions="Center"
+       Margin="0,30,0,10"
+       />
+            <Grid>
+                <BoxView
+            BackgroundColor="#6d4b96"
+            WidthRequest="327"
+            HeightRequest="70"
+            VerticalOptions="Center"
+            CornerRadius="10"
+            Margin="0,0,0,0"/>
+            </Grid>
+        </VerticalStackLayout>
+
     </VerticalStackLayout>
 </ContentPage>
