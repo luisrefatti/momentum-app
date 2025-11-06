@@ -25,7 +25,8 @@
                     FontSize="25"
                     TextColor="White"
                     FontFamily="MontserratBold"
-                    Padding="0"/>
+                    Padding="0"
+                    Background="#3a2c4d"/>
         </HorizontalStackLayout>
         
         <Label x:Name="lbStatusTask"

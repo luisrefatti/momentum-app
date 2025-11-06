@@ -62,7 +62,7 @@
         </VerticalStackLayout>
 
         <VerticalStackLayout>
-            <Label Text="Tasks by weight"
+            <Label Text="Tasks concluded by weight"
                FontFamily="MontserratBold"
                VerticalOptions="Center"
                HorizontalOptions="Center"
@@ -80,12 +80,11 @@
         </VerticalStackLayout>
 
         <VerticalStackLayout>
-            <Label Text="Focus record this week"
-       FontFamily="MontserratBold"
-       VerticalOptions="Center"
-       HorizontalOptions="Center"
-       Margin="0,30,0,10"
-       />
+            <Label Text="Most focused day (last 7 days)"
+                   FontFamily="MontserratBold"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center"
+                   Margin="0,30,0,10"/>
             <Grid>
                 <BoxView
             BackgroundColor="#6d4b96"

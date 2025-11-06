@@ -2,11 +2,100 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="momentum_app.Pages.ConfigPage"
-             Title="ConfigPage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to CONFIG PAGE"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+             Title="ConfigPage"
+             BackgroundColor="#0e0017">
+    <VerticalStackLayout HorizontalOptions="Center" >
+
+        <HorizontalStackLayout HorizontalOptions="Center" Spacing="10" Margin="0,20,0,0">
+
+            <Label Text="Configurations"
+                   VerticalOptions="Center"
+                   FontFamily="MontserratBold"
+                   FontSize="25"
+                   Margin="0,0,0,0"
+                   TextColor="#6d4b96"/>
+        </HorizontalStackLayout>
+
+        <VerticalStackLayout>
+            <Label Text="Focus time (minutes)"
+               FontFamily="MontserratBold"
+               VerticalOptions="Center"
+               HorizontalOptions="Center"
+               Margin="0,30,0,10"
+               />
+            <Grid>
+                <BoxView
+                    BackgroundColor="#6d4b96"
+                    WidthRequest="327"
+                    HeightRequest="70"
+                    VerticalOptions="Center"
+                    CornerRadius="10"
+                    Margin="0,0,0,0"/>
+            </Grid>
+        </VerticalStackLayout>
+
+        <VerticalStackLayout>
+            <Label Text="Short break (minutes)"
+               FontFamily="MontserratBold"
+               VerticalOptions="Center"
+               HorizontalOptions="Center"
+               Margin="0,30,0,10"
+               />
+            <Grid>
+                <BoxView
+                    BackgroundColor="#6d4b96"
+                    WidthRequest="327"
+                    HeightRequest="70"
+                    VerticalOptions="Center"
+                    CornerRadius="10"
+                    Margin="0,0,0,0"/>
+            </Grid>
+        </VerticalStackLayout>
+
+        <VerticalStackLayout>
+            <Label Text="Long break (minutes)"
+                   FontFamily="MontserratBold"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center"
+                   Margin="0,30,0,10"/>
+            <Grid>
+                <BoxView
+            BackgroundColor="#6d4b96"
+            WidthRequest="327"
+            HeightRequest="70"
+            VerticalOptions="Center"
+            CornerRadius="10"
+            Margin="0,0,0,0"/>
+            </Grid>
+        </VerticalStackLayout>
+
+        <VerticalStackLayout>
+            <Label Text="Cycles for long break (minutes)"
+                    FontFamily="MontserratBold"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    Margin="0,30,0,10"/>
+            <Grid>
+                <BoxView
+                BackgroundColor="#6d4b96"
+                WidthRequest="327"
+                HeightRequest="70"
+                VerticalOptions="Center"
+                CornerRadius="10"
+                Margin="0,0,0,0"/>
+            </Grid>
+        </VerticalStackLayout>
+
+        <VerticalStackLayout>
+            <Grid>
+                <Button Text="Save"
+                        x:Name="bt_save"
+                        FontFamily="MontserratBold"
+                        TextColor="white"
+                        Margin="0,30,0,0"
+                        Background="#3a2c4d"/>
+            </Grid>
+        </VerticalStackLayout>
+
     </VerticalStackLayout>
 </ContentPage>
