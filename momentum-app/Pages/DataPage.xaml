@@ -2,11 +2,32 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="momentum_app.Pages.DataPage"
-             Title="DataPage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to DATA PAGE"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+             Title="DataPage"
+             BackgroundColor="#0e0017">
+    
+    <VerticalStackLayout HorizontalOptions="Center" >
+
+        <HorizontalStackLayout HorizontalOptions="Center" Spacing="10" Margin="0,20,0,0">
+
+            <Label Text="Statistics"
+                   VerticalOptions="Center"
+                   FontFamily="MontserratBold"
+                   FontSize="25"
+                   Margin="0,0,0,0"
+                   TextColor="#6d4b96"/>
+        </HorizontalStackLayout>
+
+        <Label Text="General"
+               FontFamily="MontserratBold"
+               VerticalOptions="Center"
+               HorizontalOptions="Center"
+               Margin="0,30,0,0"
+               />
+        <HorizontalStackLayout>
+            <Grid BackgroundColor="#6d4b96">
+                
+            </Grid>
+            
+        </HorizontalStackLayout>
     </VerticalStackLayout>
 </ContentPage>

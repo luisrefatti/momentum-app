@@ -12,7 +12,7 @@
             <Label Text="My tasks"
                    VerticalOptions="Center"
                    FontFamily="MontserratBold"
-                   FontSize="20"
+                   FontSize="25"
                    Margin="0,0,70,0"
                    TextColor="#6d4b96"/>
 
@@ -27,7 +27,13 @@
                     FontFamily="MontserratBold"
                     Padding="0"/>
         </HorizontalStackLayout>
-        <Label x:Name="lbStatusTask" Text="Não existem tarefas lançadas." FontFamily="Montserrat" FontSize="10" HorizontalOptions="Center" Margin="0,50,0,0"/>
+        
+        <Label x:Name="lbStatusTask"
+               Text="No to-dos here."
+               FontFamily="Montserrat"
+               FontSize="Body"
+               HorizontalOptions="Center"
+               Margin="0,50,0,0"/>
         
     </VerticalStackLayout>
 </ContentPage>
