@@ -52,7 +52,7 @@ namespace momentum_app.Pages
             {
                 Text = weight,
                 TextColor = GetColorForWeight(weight),
-                FontFamily = "MontserratBold",
+                FontFamily = "SpaceMono",
                 FontSize = 10,
                 VerticalOptions = LayoutOptions.Center,
                 Margin = new Thickness(5, 0)
