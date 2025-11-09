@@ -23,6 +23,7 @@
                HorizontalOptions="Center"
                Margin="0,30,0,10"
                />
+
             <Grid>
                 <BoxView
                     BackgroundColor="#6d4b96"
@@ -31,6 +32,18 @@
                     VerticalOptions="Center"
                     CornerRadius="10"
                     Margin="0,0,0,0"/>
+
+                <Entry
+                    x:Name="enFocusTime"
+                    Text="25"
+                    Keyboard="Numeric"
+                    TextColor="White"
+                    FontFamily="SpaceMono"
+                    FontSize="30"
+                    VerticalOptions="Center"
+                    BackgroundColor="Transparent"
+                    WidthRequest="300"
+                    HorizontalTextAlignment="Center"/>
             </Grid>
         </VerticalStackLayout>
 
@@ -49,6 +62,18 @@
                     VerticalOptions="Center"
                     CornerRadius="10"
                     Margin="0,0,0,0"/>
+
+                <Entry
+                    x:Name="enShortBreak"
+                    Text="5"
+                    Keyboard="Numeric"
+                    TextColor="White"
+                    FontFamily="SpaceMono"
+                    FontSize="30"
+                    VerticalOptions="Center"
+                    BackgroundColor="Transparent"
+                    WidthRequest="300"
+                    HorizontalTextAlignment="Center"/>
             </Grid>
         </VerticalStackLayout>
 
@@ -66,6 +91,18 @@
             VerticalOptions="Center"
             CornerRadius="10"
             Margin="0,0,0,0"/>
+
+                <Entry
+                    x:Name="enLngBreak"
+                    Text="10"
+                    Keyboard="Numeric"
+                    TextColor="White"
+                    FontFamily="SpaceMono"
+                    FontSize="30"
+                    VerticalOptions="Center"
+                    BackgroundColor="Transparent"
+                    WidthRequest="300"
+                    HorizontalTextAlignment="Center"/>
             </Grid>
         </VerticalStackLayout>
 
@@ -83,6 +120,18 @@
                 VerticalOptions="Center"
                 CornerRadius="10"
                 Margin="0,0,0,0"/>
+
+                <Entry
+                    x:Name="enCycles"
+                    Text="4"
+                    Keyboard="Numeric"
+                    TextColor="White"
+                    FontFamily="SpaceMono"
+                    FontSize="30"
+                    VerticalOptions="Center"
+                    BackgroundColor="Transparent"
+                    WidthRequest="300"
+                    HorizontalTextAlignment="Center"/>
             </Grid>
         </VerticalStackLayout>
 
