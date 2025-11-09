@@ -17,7 +17,7 @@
                    HorizontalTextAlignment="Center"/>
             
             <Label x:Name="lbFrase"
-                   Text="Stay focused!"
+                   Text="Foco total!"
                    TextColor="#f2f2f2"
                    FontFamily="Montserrat"
                    HorizontalOptions="Center"
