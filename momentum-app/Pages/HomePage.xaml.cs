@@ -1,6 +1,8 @@
 using Microsoft.Maui.Storage;
-using System;
+using Plugin.LocalNotification;
+using Plugin.LocalNotification.AndroidOption;
 using Plugin.Maui.Audio;
+using System;
 
 
 namespace momentum_app.Pages
@@ -36,6 +38,19 @@ namespace momentum_app.Pages
         protected override async void OnAppearing()
         {
             base.OnAppearing();
+
+            try
+            {
+                if (await LocalNotificationCenter.Current.AreNotificationsEnabled() == false)
+                {
+                    await LocalNotificationCenter.Current.RequestNotificationPermission();
+                }
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine($"Erro ao pedir permissão: {ex.Message}");
+            }
+
             LoadSettings();
             ResetTimer(TimerState.Focus);
             _cycleCount = 0;
@@ -57,13 +72,34 @@ namespace momentum_app.Pages
             _timer.Interval = TimeSpan.FromSeconds(1);
             _timer.Tick += Timer_Tick;
         }
-
         private void LoadSettings()
         {
             _focusTime = Preferences.Get("FocusTime", 25);
             _shortBreakTime = Preferences.Get("ShortBreak", 5);
             _longBreakTime = Preferences.Get("LongBreak", 10);
             _cyclesForLongBreak = Preferences.Get("Cycles", 4);
+        }
+
+        private async Task SendNotification(string title, string message)
+        {
+            var request = new NotificationRequest
+            {
+                NotificationId = 1337,
+                Title = title,
+                Description = message,
+                Schedule = new NotificationRequestSchedule
+                {
+                    NotifyTime = DateTime.Now
+                },
+
+                Android = new AndroidOptions
+                {
+                    IconSmallName = new AndroidIcon { ResourceName = "appicon" }
+                }
+
+            };
+
+            await LocalNotificationCenter.Current.Show(request);
         }
 
         private void ResetTimer(TimerState newState)
@@ -107,7 +143,17 @@ namespace momentum_app.Pages
                 {
                     System.Diagnostics.Debug.WriteLine($"Audio error: {ex.Message}");
                 }
+
                 GoToNextState();
+
+                try
+                {
+                    await SendNotification("Momentum", lbFrase.Text);
+                }
+                catch (Exception ex)
+                {
+                    System.Diagnostics.Debug.WriteLine($"Notification error: {ex.Message}");
+                }
             }
         }
 
