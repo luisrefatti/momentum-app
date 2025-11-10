@@ -7,6 +7,7 @@ public partial class ConfigPage : ContentPage
     public ConfigPage()
     {
         InitializeComponent();
+        LoadSettings();
     }
 
     private void LoadSettings()
@@ -19,57 +20,35 @@ public partial class ConfigPage : ContentPage
 
     private async void bt_save_Clicked(object sender, EventArgs e)
     {
-        bool allValid = true;
-
-        if (int.TryParse(enFocusTime.Text, out int focusTime))
+        if (!int.TryParse(enFocusTime.Text, out int focusTime))
         {
-            Preferences.Set("FocusTime", focusTime);
-        }
-        else
-        {
-            allValid = false;
             await DisplayAlert("Error", "Invalid Focus Time", "OK");
+            return;
         }
 
-        if (int.TryParse(enShortBreak.Text, out int shortBreak))
+        if (!int.TryParse(enShortBreak.Text, out int shortBreak))
         {
-            Preferences.Set("ShortBreak", shortBreak);
-        }
-        else
-        {
-            allValid = false;
             await DisplayAlert("Error", "Invalid Short Break Time", "OK");
+            return;
         }
 
-        if (int.TryParse(enLngBreak.Text, out int longBreak))
+        if (!int.TryParse(enLngBreak.Text, out int longBreak))
         {
-            Preferences.Set("LongBreak", longBreak);
-        }
-        else
-        {
-            allValid = false;
             await DisplayAlert("Error", "Invalid Long Break Time", "OK");
+            return;
         }
 
-        if (int.TryParse(enCycles.Text, out int cycles))
+        if (!int.TryParse(enCycles.Text, out int cycles))
         {
-            Preferences.Set("Cycles", cycles);
-        }
-        else
-        {
-            allValid = false;
-            await DisplayAlert("Error", "Invalid Cycles Time", "OK");
+            await DisplayAlert("Error", "Invalid Cycles Count", "OK");
+            return;
         }
 
-        if (allValid)
-        {
-            await DisplayAlert("Success", "Settings saved successfully", "OK");
-        }
+        Preferences.Set("FocusTime", focusTime);
+        Preferences.Set("ShortBreak", shortBreak);
+        Preferences.Set("LongBreak", longBreak);
+        Preferences.Set("Cycles", cycles);
 
-        else
-        {
-            await DisplayAlert("Error", "Something went wrong, contact the administrator", "All right");
-        }
-
+        await DisplayAlert("Success", "Settings saved successfully", "OK");
     }
 }
