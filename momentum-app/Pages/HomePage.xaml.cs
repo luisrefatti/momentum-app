@@ -80,26 +80,22 @@ namespace momentum_app.Pages
             _cyclesForLongBreak = Preferences.Get("Cycles", 4);
         }
 
-        private async Task SendNotification(string title, string message)
+        private void SendNotification(string title, string message)
         {
             var request = new NotificationRequest
             {
                 NotificationId = 1337,
                 Title = title,
                 Description = message,
-                Schedule = new NotificationRequestSchedule
-                {
-                    NotifyTime = DateTime.Now
-                },
+                BadgeNumber = 42,
 
-                Android = new AndroidOptions
-                {
-                    IconSmallName = new AndroidIcon { ResourceName = "appicon" }
-                }
-
+                //Android = new AndroidOptions
+                //{
+                //    IconSmallName = new AndroidIcon { ResourceName = "appicon" }
+                //}
             };
 
-            await LocalNotificationCenter.Current.Show(request);
+            LocalNotificationCenter.Current.Show(request);
         }
 
         private void ResetTimer(TimerState newState)
@@ -144,16 +140,8 @@ namespace momentum_app.Pages
                     System.Diagnostics.Debug.WriteLine($"Audio error: {ex.Message}");
                 }
 
+                SendNotification("Hey!", "Time is over!");
                 GoToNextState();
-
-                try
-                {
-                    await SendNotification("Momentum", lbFrase.Text);
-                }
-                catch (Exception ex)
-                {
-                    System.Diagnostics.Debug.WriteLine($"Notification error: {ex.Message}");
-                }
             }
         }
 
