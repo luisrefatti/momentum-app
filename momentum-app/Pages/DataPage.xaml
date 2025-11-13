@@ -34,7 +34,7 @@
                 </Grid>
             </Frame>
 
-            <Frame BackgroundColor="#6d4b96" CornerRadius="10" Padding="20">
+            <Frame BackgroundColor="#3a2c4d" CornerRadius="10" Padding="20">
                 <Grid ColumnDefinitions="*,Auto">
                     <Label Grid.Column="0" 
                            Text="Short Breaks Taken" 
@@ -46,7 +46,7 @@
                            Text="0" 
                            FontFamily="SpaceMono" 
                            FontSize="24" 
-                           TextColor="#fff"
+                           TextColor="#6d4b96"
                            FontAttributes="Bold"
                            VerticalOptions="Center"/>
                 </Grid>

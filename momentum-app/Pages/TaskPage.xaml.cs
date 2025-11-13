@@ -206,15 +206,14 @@ namespace momentum_app.Pages
 
             if (newTaskView.Children[0] is CheckBox newCheckBox)
             {
-                newCheckBox.IsChecked = wasChecked;
-
                 if (wasChecked)
                 {
                     newCheckBox.AutomationId = "counted";
                 }
+
+                newCheckBox.IsChecked = wasChecked;
             }
         }
-
         private void OnDeleteTaskClicked(object sender, EventArgs e)
         {
             var deleteButton = (Button)sender;

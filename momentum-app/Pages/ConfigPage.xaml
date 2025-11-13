@@ -107,7 +107,7 @@
         </VerticalStackLayout>
 
         <VerticalStackLayout>
-            <Label Text="Cycles for long break (minutes)"
+            <Label Text="Cycles for long break"
                     FontFamily="MontserratBold"
                     VerticalOptions="Center"
                     HorizontalOptions="Center"
