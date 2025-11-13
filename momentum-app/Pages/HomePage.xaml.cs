@@ -29,6 +29,8 @@ namespace momentum_app.Pages
         private int _longBreakTime;
         private int _cyclesForLongBreak;
 
+        private bool _isFirstAppearance = true;
+
         public HomePage()
         {
             InitializeComponent();
@@ -52,9 +54,13 @@ namespace momentum_app.Pages
             }
 
             LoadSettings();
-            ResetTimer(TimerState.Focus);
-            _cycleCount = 0;
-            _isRunning = false;
+
+            if (_isFirstAppearance)
+            {
+                ResetTimer(TimerState.Focus);
+                _cycleCount = 0;
+                _isFirstAppearance = false;
+            }
 
             try
             {
@@ -149,13 +155,22 @@ namespace momentum_app.Pages
         {
             if (_currentState == TimerState.Focus)
             {
+                var totalFocus = Preferences.Get("TotalFocusSessions", 0);
+                Preferences.Set("TotalFocusSessions", totalFocus + 1);
+
                 _cycleCount++;
                 if (_cycleCount >= _cyclesForLongBreak)
                 {
+                    var totalLong = Preferences.Get("TotalLongBreaks", 0);
+                    Preferences.Set("TotalLongBreaks", totalLong + 1);
+
                     ResetTimer(TimerState.LongBreak);
                 }
                 else
                 {
+                    var totalShort = Preferences.Get("TotalShortBreaks", 0);
+                    Preferences.Set("TotalShortBreaks", totalShort + 1);
+
                     ResetTimer(TimerState.ShortBreak);
                 }
             }

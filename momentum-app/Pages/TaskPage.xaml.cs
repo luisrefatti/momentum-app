@@ -153,6 +153,13 @@ namespace momentum_app.Pages
                     taskLabel.TextDecorations = TextDecorations.Strikethrough;
                     taskLabel.TextColor = Colors.Gray;
                     weightLabel.TextColor = Colors.Gray;
+
+                    if (checkBox.AutomationId != "counted")
+                    {
+                        var totalTasks = Preferences.Get("TotalTasksCompleted", 0);
+                        Preferences.Set("TotalTasksCompleted", totalTasks + 1);
+                        checkBox.AutomationId = "counted";
+                    }
                 }
                 else
                 {
@@ -200,6 +207,11 @@ namespace momentum_app.Pages
             if (newTaskView.Children[0] is CheckBox newCheckBox)
             {
                 newCheckBox.IsChecked = wasChecked;
+
+                if (wasChecked)
+                {
+                    newCheckBox.AutomationId = "counted";
+                }
             }
         }
 

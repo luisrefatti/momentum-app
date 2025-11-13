@@ -1,101 +1,103 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:views="clr-namespace:Microsoft.Maui.Controls;assembly=Microsoft.Maui.Controls"
              x:Class="momentum_app.Pages.DataPage"
              Title="DataPage"
              BackgroundColor="#0e0017">
-    
-    <VerticalStackLayout HorizontalOptions="Center" >
 
-        <HorizontalStackLayout HorizontalOptions="Center" Spacing="10" Margin="0,20,0,0">
+    <VerticalStackLayout Padding="20" Spacing="15">
 
-            <Label Text="Statistics"
-                   VerticalOptions="Center"
-                   FontFamily="MontserratBold"
-                   FontSize="25"
-                   Margin="0,0,0,0"
-                   TextColor="#6d4b96"/>
-        </HorizontalStackLayout>
-
-        <Label Text="General"
+        <Label Text="Statistics"
                FontFamily="MontserratBold"
-               VerticalOptions="Center"
+               FontSize="25"
+               TextColor="#6d4b96"
                HorizontalOptions="Center"
-               Margin="0,30,0,10"
-               />
-        
-        <HorizontalStackLayout>
-            <Grid>
-                <views:BoxView
-                    BackgroundColor="#6d4b96"
-                    WidthRequest="150"
-                    HeightRequest="75"
-                    VerticalOptions="Center"
-                    CornerRadius="10"
-                    Margin="0,0,-175,0"/>
+               Margin="0,10,0,20"/>
 
-                <views:BoxView
-                    BackgroundColor="#6d4b96"
-                    WidthRequest="150"
-                    HeightRequest="75"
-                    VerticalOptions="Center"
-                    CornerRadius="10"
-                    Margin="0,0,175,0"/>
-            </Grid>
-        </HorizontalStackLayout>
-        <VerticalStackLayout>
-            <Label Text="Focus last 7 days"
-               FontFamily="MontserratBold"
-               VerticalOptions="Center"
-               HorizontalOptions="Center"
-               Margin="0,30,0,10"
-               />
-            <Grid>
-                <views:BoxView
-                    BackgroundColor="#6d4b96"
-                    WidthRequest="327"
-                    HeightRequest="100"
-                    VerticalOptions="Center"
-                    CornerRadius="10"
-                    Margin="0,0,0,0"/>
-            </Grid>
+        <VerticalStackLayout Spacing="10">
+
+            <Frame BackgroundColor="#3a2c4d" CornerRadius="10" Padding="20">
+                <Grid ColumnDefinitions="*,Auto">
+                    <Label Grid.Column="0" 
+                           Text="Focus Sessions Completed" 
+                           FontFamily="Montserrat" 
+                           TextColor="White"
+                           VerticalOptions="Center"/>
+                    <Label Grid.Column="1" 
+                           x:Name="lbFocus" 
+                           Text="0" 
+                           FontFamily="SpaceMono" 
+                           FontSize="24" 
+                           TextColor="#6d4b96"
+                           FontAttributes="Bold"
+                           VerticalOptions="Center"/>
+                </Grid>
+            </Frame>
+
+            <Frame BackgroundColor="#6d4b96" CornerRadius="10" Padding="20">
+                <Grid ColumnDefinitions="*,Auto">
+                    <Label Grid.Column="0" 
+                           Text="Short Breaks Taken" 
+                           FontFamily="Montserrat" 
+                           TextColor="White"
+                           VerticalOptions="Center"/>
+                    <Label Grid.Column="1" 
+                           x:Name="lbShortBreaks" 
+                           Text="0" 
+                           FontFamily="SpaceMono" 
+                           FontSize="24" 
+                           TextColor="#fff"
+                           FontAttributes="Bold"
+                           VerticalOptions="Center"/>
+                </Grid>
+            </Frame>
+
+            <Frame BackgroundColor="#3a2c4d" CornerRadius="10" Padding="20">
+                <Grid ColumnDefinitions="*,Auto">
+                    <Label Grid.Column="0" 
+                           Text="Long Breaks Taken" 
+                           FontFamily="Montserrat" 
+                           TextColor="White"
+                           VerticalOptions="Center"/>
+                    <Label Grid.Column="1" 
+                           x:Name="lbLongBreaks" 
+                           Text="0" 
+                           FontFamily="SpaceMono" 
+                           FontSize="24" 
+                           TextColor="#6d4b96"
+                           FontAttributes="Bold"
+                           VerticalOptions="Center"/>
+                </Grid>
+            </Frame>
+
+            <Frame BackgroundColor="#3a2c4d" CornerRadius="10" Padding="20">
+                <Grid ColumnDefinitions="*,Auto">
+                    <Label Grid.Column="0" 
+                           Text="Tasks Completed" 
+                           FontFamily="Montserrat" 
+                           TextColor="White"
+                           VerticalOptions="Center"/>
+                    <Label Grid.Column="1" 
+                           x:Name="lbTasks" 
+                           Text="0" 
+                           FontFamily="SpaceMono" 
+                           FontSize="24" 
+                           TextColor="#6d4b96"
+                           FontAttributes="Bold"
+                           VerticalOptions="Center"/>
+                </Grid>
+            </Frame>
+
         </VerticalStackLayout>
 
-        <VerticalStackLayout>
-            <Label Text="Tasks concluded by weight"
-               FontFamily="MontserratBold"
-               VerticalOptions="Center"
-               HorizontalOptions="Center"
-               Margin="0,30,0,10"
-               />
-            <Grid>
-                <views:BoxView
-                    BackgroundColor="#6d4b96"
-                    WidthRequest="327"
-                    HeightRequest="100"
-                    VerticalOptions="Center"
-                    CornerRadius="10"
-                    Margin="0,0,0,0"/>
-            </Grid>
-        </VerticalStackLayout>
-
-        <VerticalStackLayout>
-            <Label Text="Most focused day (last 7 days)"
-                   FontFamily="MontserratBold"
-                   VerticalOptions="Center"
-                   HorizontalOptions="Center"
-                   Margin="0,30,0,10"/>
-            <Grid>
-                <views:BoxView
-            BackgroundColor="#6d4b96"
-            WidthRequest="327"
-            HeightRequest="70"
-            VerticalOptions="Center"
-            CornerRadius="10"
-            Margin="0,0,0,0"/>
-            </Grid>
-        </VerticalStackLayout>
+        <Button Text="Reset"
+                x:Name="btReset"
+                FontFamily="MontserratBold"
+                TextColor="White"
+                BackgroundColor="#ff6b6b" 
+                CornerRadius="10"
+                Margin="0,30,0,0"
+                Clicked="btReset_Clicked"/>
 
     </VerticalStackLayout>
 </ContentPage>
