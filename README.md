@@ -2,8 +2,8 @@
 > **STUDY SESSIONS AND TASK MANAGER**
 
 ![License](https://img.shields.io/badge/license-MIT-purple)
-![Platform](https://img.shields.io/badge/platform-Android%20|%20iOS-blue)
-![.NET](https://img.shields.io/badge/.NET-8.0-512bd4)
+![Platform](https://img.shields.io/badge/platform-Android%20)
+![.NET](https://img.shields.io/badge/.NET-9.0-512bd4)
 
 ## About
 
