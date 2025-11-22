@@ -22,7 +22,7 @@ Ele combina a técnica **Pomodoro** com um **gerenciador de tarefas** robusto e 
 ### Task manager
 * Adicione, edite e exclua tarefas facilmente.
 * Categorização inteligente e definição de prioridades.
-* **Persistência de dados local** utilizando armazenmaneto local.
+* **Persistência de dados local** utilizando armazenamento local.
 
 ### Statistics
 * Dados de tempo de foco, ciclos concluídos e mais.
