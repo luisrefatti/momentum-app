@@ -28,7 +28,7 @@
                            Text="0" 
                            FontFamily="SpaceMono" 
                            FontSize="24" 
-                           TextColor="#6d4b96"
+                           TextColor="#fff"
                            FontAttributes="Bold"
                            VerticalOptions="Center"/>
                 </Grid>
@@ -46,7 +46,7 @@
                            Text="0" 
                            FontFamily="SpaceMono" 
                            FontSize="24" 
-                           TextColor="#6d4b96"
+                           TextColor="#fff"
                            FontAttributes="Bold"
                            VerticalOptions="Center"/>
                 </Grid>
@@ -64,7 +64,7 @@
                            Text="0" 
                            FontFamily="SpaceMono" 
                            FontSize="24" 
-                           TextColor="#6d4b96"
+                           TextColor="#fff"
                            FontAttributes="Bold"
                            VerticalOptions="Center"/>
                 </Grid>
@@ -82,7 +82,7 @@
                            Text="0" 
                            FontFamily="SpaceMono" 
                            FontSize="24" 
-                           TextColor="#6d4b96"
+                           TextColor="#fff"
                            FontAttributes="Bold"
                            VerticalOptions="Center"/>
                 </Grid>
